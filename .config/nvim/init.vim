@@ -38,4 +38,5 @@ set completeopt+=noinsert
 hi Visual ctermbg=24
 hi SpellBad ctermfg=237 ctermbg=226
 hi SpellCap ctermfg=237 ctermbg=208
-
+hi LineNr ctermbg=254
+hi LineNr ctermfg=grey

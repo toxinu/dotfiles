@@ -76,7 +76,9 @@ let g:pymode_motion = 0
 let g:pymode_folding = 0
 let g:pymode_lint_unmodified = 0
 let g:pymode_lint_message = 1
+let g:pymode_rope = 1
 let g:pymode_rope_completion = 0
+let g:pymode_rope_goto_definition_bind = 'gd'
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_lint_checkers = ['pyflakes', 'pep8']
 
@@ -88,6 +90,10 @@ imap <C-Y> <c-o>:call yapf#YAPF()<cr>
 """""""
 map <C-p> :Files<CR>
 map <C-b> :Buffers<CR>
+let g:fzf_buffers_jump = 1
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 """""""
 " Ale "
